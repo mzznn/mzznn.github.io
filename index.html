@@ -6,20 +6,9 @@ layout: default
   {% for post in paginator.posts %}
   <article class="post">
 
-    <li></li>><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> • <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more&nbsp;&#183;{% include read-time.html content=post.content %}</a>
-    
-    <div class="entry">
-      {% if post.content contains '<!--more-->' %}
-
-      {{ post.excerpt }}
-
-      {% else %}
-
-      {{ post.excerpt | markdownify | strip_html | truncate: 160 }}
-
-      {% endif %}
-    </div>
-
+    <li>
+      <ul><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> • <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more&nbsp;&#183;{% include read-time.html content=post.content %}</a></ul>
+    </li>>
     
   </article>
   {% endfor %}
