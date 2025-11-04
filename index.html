@@ -5,7 +5,7 @@ layout: default
 <div class="posts">
   {% for post in paginator.posts %}
   <article class="post">
-  &nbsp;{{ page.date | date: "%B %e, %Y" }} <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> • <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more&nbsp;&#183;{% include read-time.html content=post.content %}</a>
+  <span style="color: #333333; font-weight: normal;">&nbsp;{{ page.date | date: "%B %e, %Y" }}</span> <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> • <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">Read more&nbsp;&#183;{% include read-time.html content=post.content %}</a>
   </article>
   {% endfor %}
 
