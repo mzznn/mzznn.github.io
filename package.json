@@ -1,10 +1,10 @@
 {
+  "scripts": {
+    "start": "npm run open",
+    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/\""
+  },
   "devDependencies": {
     "concurrently": "^9.2.1",
     "http-server": "^14.1.1"
   }
-  "scripts": {
-    "start": "npm run open",
-    "open": "concurrently \"http-server -a localhost -p 1234\" \"open http://localhost:1234/build\""
- }
 }
